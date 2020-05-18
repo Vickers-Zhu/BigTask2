@@ -694,11 +694,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\VickersZhu\\source\\repos\\BigTask2\\BigTask2\\BigTask2.csproj",
+      "projectUniqueName": "C:\\Users\\VickersZhu\\Documents\\GitHub\\BigTask2\\BigTask2\\BigTask2.csproj",
       "projectName": "BigTask2",
-      "projectPath": "C:\\Users\\VickersZhu\\source\\repos\\BigTask2\\BigTask2\\BigTask2.csproj",
+      "projectPath": "C:\\Users\\VickersZhu\\Documents\\GitHub\\BigTask2\\BigTask2\\BigTask2.csproj",
       "packagesPath": "C:\\Users\\VickersZhu\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\VickersZhu\\source\\repos\\BigTask2\\BigTask2\\obj\\",
+      "outputPath": "C:\\Users\\VickersZhu\\Documents\\GitHub\\BigTask2\\BigTask2\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
