@@ -74,7 +74,7 @@ namespace BigTask2.Ui
                 if (city != route.From)
                 {
                     city = route.From;
-                    Console.WriteLine("</City>");
+                    Console.WriteLine("<City/>");
                     decorator.Set("Name", city.Name);
                     Console.WriteLine(decorator.Result());
                     decorator.Set("Population", city.Population.ToString());
@@ -93,7 +93,7 @@ namespace BigTask2.Ui
                 if (city != route.To)
                 {
                     city = route.To;
-                    Console.WriteLine("</City>");
+                    Console.WriteLine("<City/>");
                     decorator.Set("Name", city.Name);
                     Console.WriteLine(decorator.Result());
                     decorator.Set("Population", city.Population.ToString());
