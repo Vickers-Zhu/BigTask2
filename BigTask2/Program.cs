@@ -4,7 +4,7 @@ using BigTask2.Ui;
 using System;
 using System.Collections.Generic;
 using System.IO;
-
+using BigTask2.RequestHandler;
 namespace BigTask2
 {
 	class Program
@@ -12,22 +12,34 @@ namespace BigTask2
         static IEnumerable<Route> ServeRequest(Request request)
         {
             (IGraphDatabase cars, IGraphDatabase trains) = MockData.InitDatabases();
-
             /*
 			 *
 			 * Add request handling here and return calculated route
 			 *
 			 */
-            return null;
+            IRequest vert = new DataVerification();
+            IRequest prob = new PickProblem();
+            IRequest merg = new MergingDatase(cars, trains);
+            IRequest filt = new AddFilter();
+            IRequest solv = new PickSolver();
+
+            vert.SetNext(prob);
+            prob.SetNext(merg);
+            merg.SetNext(filt);
+            filt.SetNext(solv);
+
+            return vert.Handle(request, null); 
 		}
 		static void Main(string[] args)
 		{
+            uiFactory factory;         
             Console.WriteLine("---- Xml Interface ----");
             /*
 			 * Create XML System Here
              * and execute prepared strings
 			 */
-            //Execute(xmlSystem, "xml_input.txt");
+            factory = new XmlFactory();
+            Execute(CreateSystem(factory), "xml_input.txt");
             Console.WriteLine();
 
             Console.WriteLine("---- KeyValue Interface ----");
@@ -35,20 +47,20 @@ namespace BigTask2
 			 * Create INI System Here
              * and execute prepared strings
 			 */
-            //Execute(keyValueSystem, "key_value_input.txt");
+            factory = new KvFactory();
+            Execute(CreateSystem(factory), "key_value_input.txt");
             Console.WriteLine();
 
-            //Console.WriteLine(KeyKey("to=Gotham"));
             Console.ReadKey();
         }
 
         /* Prepare method Create System here (add return, arguments and body)*/
-        /*static CreateSystem 
+        static ISystem CreateSystem(uiFactory factory)
         {
-			
-        }*/
+            return factory.GetSystem();
+        }
 
-        static void Execute(ISystem system, string path)
+    static void Execute(ISystem system, string path)
         {
             IEnumerable<IEnumerable<string>> allInputs = ReadInputs(path);
             foreach (var inputs in allInputs)

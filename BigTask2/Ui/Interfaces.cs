@@ -23,6 +23,5 @@ namespace BigTask2.Ui
     {
         IForm Form { get; }
         IDisplay Display { get; }
-        void Accept(ISolver solver);
     }
 }

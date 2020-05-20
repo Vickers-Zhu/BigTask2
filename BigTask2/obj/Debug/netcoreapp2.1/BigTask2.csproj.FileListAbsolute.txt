@@ -1,0 +1,11 @@
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.csprojAssemblyReference.cache
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.csproj.CoreCompileInputs.cache
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.AssemblyInfoInputs.cache
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.AssemblyInfo.cs
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.deps.json
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.runtimeconfig.json
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.runtimeconfig.dev.json
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.dll
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.pdb
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.dll
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.pdb

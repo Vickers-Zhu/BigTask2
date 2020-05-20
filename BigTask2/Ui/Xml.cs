@@ -19,11 +19,6 @@ namespace BigTask2.Ui
             this.Form = form;
             this.Display = display;
         }
-
-        public void Accept(ISolver solver)
-        {
-            throw new NotImplementedException();
-        }
     }
 
     class XmlForm : IForm
@@ -54,7 +49,9 @@ namespace BigTask2.Ui
         {
             //Checked
             string[] elements = System.Text.RegularExpressions.Regex.Split(name, pattern);
-            return elements[1].Trim();
+            if(elements.Count() > 1)
+                return elements[1].Trim();
+            return null;
         }
 
         private string KeyXml(string name)
@@ -69,7 +66,47 @@ namespace BigTask2.Ui
     {
         public void Print(IEnumerable<Route> routes)
         {
-            throw new NotImplementedException();
+            if (routes == null) return;
+            XmlDec decorator = new XmlDec();
+            City city = null;
+            foreach (Route route in routes)
+            {
+                if (city != route.From)
+                {
+                    city = route.From;
+                    Console.WriteLine("</City>");
+                    decorator.Set("Name", city.Name);
+                    Console.WriteLine(decorator.Result());
+                    decorator.Set("Population", city.Population.ToString());
+                    Console.WriteLine(decorator.Result());
+                    decorator.Set("HasRestaurant", city.HasRestaurant.ToString());
+                }
+                Console.WriteLine();
+                Console.WriteLine("<Route/>");
+                decorator.Set("Vehicle", route.VehicleType.ToString());
+                Console.WriteLine(decorator.Result());
+                decorator.Set("Cost", route.Cost.ToString());
+                Console.WriteLine(decorator.Result());
+                decorator.Set("TravelTime", route.TravelTime.ToString());
+                Console.WriteLine(decorator.Result());
+                Console.WriteLine();
+                if (city != route.To)
+                {
+                    city = route.To;
+                    Console.WriteLine("</City>");
+                    decorator.Set("Name", city.Name);
+                    Console.WriteLine(decorator.Result());
+                    decorator.Set("Population", city.Population.ToString());
+                    Console.WriteLine(decorator.Result());
+                    decorator.Set("HasRestaurant", city.HasRestaurant.ToString());
+                }
+            }
+            Console.WriteLine();
+            decorator.Set("totalTime", Util.TimeSum(routes).ToString());
+            Console.WriteLine(decorator.Result());
+            decorator.Set("totalCost", Util.CostSum(routes).ToString());
+            Console.WriteLine(decorator.Result());
+            Console.WriteLine();
         }
     }
 }
