@@ -9,3 +9,4 @@ C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\B
 C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\bin\Debug\netcoreapp2.1\BigTask2.pdb
 C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.dll
 C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.pdb
+C:\Users\VickersZhu\Documents\GitHub\BigTask2\BigTask2\obj\Debug\netcoreapp2.1\BigTask2.genruntimeconfig.cache

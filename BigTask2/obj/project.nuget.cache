@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+ZowjlL0f1vZffobIkPvyBCVgme8Y7p0hmxmf7iJ3HyLFFhfvyCRSXGTiP/m3RHgNKqPAMm7Qn1pRKmLkucmwQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\VickersZhu\\Documents\\GitHub\\BigTask2\\BigTask2\\BigTask2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\VickersZhu\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.2\\microsoft.aspnetcore.app.ref.3.1.2.nupkg.sha512"
+  ],
+  "logs": []
+}
